@@ -1,0 +1,4 @@
+__pycache__/
+.phi_env/
+db.sqlite3
+.env
