@@ -9,7 +9,7 @@ from product.filters import ProductFilter
 from rest_framework.filters import SearchFilter, OrderingFilter
 from product.paginations import DefaultPagination
 from api.permission import IsAdminOrReadOnly
-from product.permissions import IsReviewAuthorOrReadonly
+from product.permissions import IsReviewAuthorOrReadOnly
 from drf_yasg.utils import swagger_auto_schema
 
 
@@ -73,7 +73,7 @@ class CategoryViewSet(ModelViewSet):
 
 class ReviewViewSet(ModelViewSet):
     serializer_class = ReviewSerializer
-    permission_classes = [IsReviewAuthorOrReadonly]
+    permission_classes = [IsReviewAuthorOrReadOnly]
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
