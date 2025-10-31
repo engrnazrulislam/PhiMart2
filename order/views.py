@@ -27,7 +27,8 @@ class CartViewSet(CreateModelMixin, RetrieveModelMixin, DestroyModelMixin, Gener
         if existing_cart:
             serializer = self.get_serializer(existing_cart)
             return Response(serializer.data, status=status.HTTP_200_OK)
-        return super().create(request, *args, **kwargs)
+        
+        return super().create(request,*args,**kwargs)
 
 class CartItemViewSet(ModelViewSet):
     # queryset = CartItem.objects.all()
