@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-)ae@1c_n8c*p4rx%+&*wcl3e3lz2l4l^_+^$1ax6e^c+@ek@@h
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True # For development
-DEBUG = False # For production
+DEBUG = True # For production
 #make migrations করার পূর্বে এটি করতে হয়।
 AUTH_USER_MODEL = 'users.User' # প্রথমে app এর নাম তারপর model এর নামঃ users.User
 
