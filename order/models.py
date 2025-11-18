@@ -9,7 +9,7 @@ class Cart(models.Model):
     # এখানে uuid4() কে কল করা হয় নাই।
     # কল করলে এটি মাইগ্রেশন ফাইলে Hard Coded হিসেবে থাকবে।
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="cart")
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="cart")
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
